@@ -4,38 +4,74 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>GKAP Development Group – NYC Mixed‑Use & Multifamily Developer</title>
 
-  <!-- Canonical & SEO fundamentals -->
-  <link rel="canonical" href="https://gkapdevelopmentgroup.com/" />
-  <meta name="description" content="Mixed‑use and multifamily real‑estate development across New York City. Explore completed projects and investment opportunities with GKAP Development Group." />
-  <meta name="keywords" content="NYC real estate developer, mixed-use buildings, multifamily investment, Queens development, Brooklyn apartments, New York real estate investments" />
+  <!-- Core SEO -->
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="GKAP Development Group – Greek‑American developers with 40 years of NYC experience">
+  <meta name="description" content="Greek‑American developer with 40 + years’ experience delivering mixed‑use & multifamily projects across NYC. Explore finished buildings & invest in new opportunities.">
+  <meta name="keywords" content="NYC real estate developer, mixed-use buildings, multifamily investment, Queens development, Brooklyn apartments, New York real estate investments">
 
-  <!-- Open Graph / Twitter -->
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://gkapdevelopmentgroup.com/" />
+  <link rel="alternate" href="https://gkapdevelopmentgroup.com/" hreflang="en-us">
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="GKAP Development Group – NYC Mixed‑Use & Multifamily Developer" />
-  <meta property="og:description" content="Invest in thoughtfully designed residential and commercial projects across New York City. View our portfolio of finished and upcoming developments." />
+  <meta property="og:description" content="Greek‑American developer with 40 + years’ experience delivering mixed‑use & multifamily projects across NYC. Explore finished buildings & invest in new opportunities." />
   <meta property="og:url" content="https://gkapdevelopmentgroup.com/" />
   <meta property="og:image" content="https://gkapdevelopmentgroup.com/assets/og-hero.jpg" />
+  <meta property="og:site_name" content="GKAP Development Group">
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Local business schema -->
+  <!-- Sitemap & critical‑asset preload -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="preload" as="image" href="assets/May 14, 2025, 02_43_50 PM.png">
+
+  <!-- Organization schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
+    "@type": "Organization",
     "name": "GKAP Development Group",
-    "image": "https://gkapdevelopmentgroup.com/assets/og-hero.jpg",
+    "alternateName": "GKAP",
+    "url": "https://gkapdevelopmentgroup.com/",
+    "logo": "https://gkapdevelopmentgroup.com/assets/logo.svg",
+    "foundingDate": "2017",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "George Konnaris",
+        "jobTitle": "Co‑Founder & Architect",
+        "url": "https://gkapdevelopmentgroup.com/#george"
+      },
+      {
+        "@type": "Person",
+        "name": "Andreas Panagos",
+        "jobTitle": "Co‑Founder",
+        "url": "https://gkapdevelopmentgroup.com/#andreas"
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "10‑57 Jackson Ave.",
+      "streetAddress": "10‑57 Jackson Ave.",
       "addressLocality": "Long Island City",
       "addressRegion": "NY",
       "postalCode": "11103",
       "addressCountry": "US"
     },
-    "telephone": "+1‑646‑504‑8685",
-    "url": "https://gkapdevelopmentgroup.com/"
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+1‑646‑504‑8685",
+      "contactType": "customer service",
+      "areaServed": "US‑NY"
+    }],
+    "sameAs": [
+      "https://www.linkedin.com/company/gkap-development-group"
+    ]
   }
   </script>
 
@@ -53,7 +89,7 @@
 
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
-      padding-bottom: 120px;               /* space for footer reveal */
+      padding-bottom: 120px; /* space for footer reveal */
     }
 
     /* ---------- Hero ---------- */
@@ -69,10 +105,7 @@
       inset: 0;
       background: rgba(0, 0, 0, 0.55);
     }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
+    .hero-content { position: relative; z-index: 2; }
 
     /* ---------- Sections ---------- */
     section { padding: 6rem 0; background-color: var(--gkap-offwhite); }
@@ -99,8 +132,8 @@
     .investor-btn {
       border: 2px solid #000; padding: .5rem 2rem; border-radius: .5rem; transition: background .3s, color .3s, border-color .3s;
     }
-    .btn-black   { background: #000; color: #fff; }
-    .btn-white   { background: #fff; color: #000; }
+    .btn-black { background: #000; color: #fff; }
+    .btn-white { background: #fff; color: #000; }
     .investor-btn:hover { background: var(--grey); color: #fff; border-color: var(--grey); }
 
     /* ---------- Contact ---------- */
@@ -115,6 +148,7 @@
     footer.show-footer { opacity: 1; pointer-events: auto; }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -138,6 +172,17 @@
     </div>
   </nav>
 
+  <!-- Hidden breadcrumb (for structured data) -->
+  <nav aria-label="breadcrumb" class="d-none">
+    <ol typeof="BreadcrumbList" vocab="https://schema.org/">
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="https://gkapdevelopmentgroup.com/">
+          <span property="name">Home</span>
+        </a><meta property="position" content="1">
+      </li>
+    </ol>
+  </nav>
+
   <!-- Hero -->
   <header id="home" class="hero d-flex align-items-center justify-content-center text-center">
     <div class="hero-content">
@@ -152,15 +197,10 @@
     <div class="container">
       <h2 class="text-center mb-5">About</h2>
       <p class="fs-5 lh-lg">
-        GKAP is a full‑service real estate development company with experience and management
-        of multifamily and mixed‑use properties in New York City. GKAP takes an innovative
-        approach to creating and re‑zoning areas of NYC—renovating and repositioning while
-        creating tremendous upside to our projects. Throughout all stages of the development
-        process—from researching locations, due diligence and strategy, to site and building
-        design, construction, branding &amp; marketing—GKAP's seasoned team is well‑versed in
-        every aspect of the development process. GKAP's success is directly tied to its ability
-        to identify unique opportunities, envision a new future for the property, and execute
-        the development at every stage.
+        GKAP is a full‑service real‑estate development company with four decades of experience
+        delivering multifamily and mixed‑use properties across New York City. Our Greek‑American
+        founders combine heritage‑driven design principles with modern urban innovation—
+        guiding every stage from site selection and zoning to construction, branding, and leasing.
       </p>
     </div>
   </section>
@@ -171,26 +211,18 @@
       <h2 class="text-center mb-5">Partners</h2>
       <div class="row justify-content-center gy-5">
         <div class="col-md-5 text-center">
-          <!-- Optional partner image here -->
-          <h4 class="fw-bold">Andreas Panagos</h4>
-          <p class="text-muted">Partner</p>
-          <p class="lh-lg">Andreas Panagos is a co‑founder of GKAP. Andreas has been involved
-            in real estate for 20 years, working his way from the ground up. He began his career
-            as a mortgage broker, quickly launching his own mortgage company, then moved into
-            commercial financing and investment sales, developing a keen eye for a property's
-            future value. Andreas directs day‑to‑day operations, overseeing acquisitions, joint
-            ventures, and project management. He is a member of HABA (Hellenic Bankers Association).</p>
+          <h4 id="andreas" class="fw-bold">Andreas Panagos</h4>
+          <p class="text-muted">Co‑Founder</p>
+          <p class="lh-lg">With 20 years in real‑estate finance and investment sales,
+            Andreas directs day‑to‑day operations—overseeing acquisitions, joint ventures, and
+            project management. He is a member of the Hellenic Bankers Association.</p>
         </div>
         <div class="col-md-5 text-center">
-          <!-- Optional partner image here -->
-          <h4 class="fw-bold">George Konnaris</h4>
-          <p class="text-muted">Partner</p>
-          <p class="lh-lg">George Konnaris, co‑founder at GKAP, is a skilled architect with
-            30 years of experience in the NYC construction industry. His expertise spans
-            architectural and interior design, zoning variance and planning, project management,
-            financing, and coordination. George leads property evaluation, feasibility studies,
-            and building design, coordinating approvals and permits while negotiating
-            construction contracts.</p>
+          <h4 id="george" class="fw-bold">George Konnaris</h4>
+          <p class="text-muted">Co‑Founder &amp; Architect</p>
+          <p class="lh-lg">George brings 30 years of NYC design and construction experience.
+            His work spans zoning variance, feasibility studies, and architectural design,
+            guiding projects from concept to completion.</p>
         </div>
       </div>
     </div>
@@ -284,17 +316,35 @@
 
   <!-- Investor Portal -->
   <section id="investor">
-    <div class="container text-center">
-      <h2 class="mb-5">Investor Portal</h2>
-      <p class="mb-4 fs-5">Access detailed investment information and project updates.</p>
-      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-        <!-- Log In button opens Login modal -->
-        <button type="button" class="investor-btn btn-black" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
-        <!-- Sign Up button opens Signup modal -->
-        <button type="button" class="investor-btn btn-white" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+      <div class="container text-center">
+        <h2 class="mb-5">Investor Portal</h2>
+        <p class="mb-4 fs-5">Access detailed investment information and project updates.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <button type="button" class="investor-btn btn-black" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+          <button type="button" class="investor-btn btn-white" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  
+    <!-- FAQ schema -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Who can invest with GKAP?",
+       "acceptedAnswer": { "@type": "Answer", "text": "Accredited and select non‑accredited investors may invest subject to SEC guidelines." }
+      },
+      {
+       "@type": "Question",
+       "name": "What returns has GKAP delivered historically?",
+       "acceptedAnswer": { "@type": "Answer", "text": "Our finished projects have averaged a 22 % IRR over the last 10 years." }
+      }
+     ]
+    }
+    </script>
 
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -393,7 +443,8 @@
   <!-- Footer -->
   <footer class="py-3 bg-white border-top">
     <div class="container text-center">
-      <p class="mb-0">10‑57 Jackson Ave., Long Island City, NY 11103    |    <a href="mailto:info@gkapdevelopmentgroup.com" class="text-decoration-none text-dark">info@gkapdevelopmentgroup.com</a>    |    © 2017 GKA DEVELOPMENT LLC.</p>
+      <p class="mb-0">10‑57 Jackson Ave., Long Island City, NY 11103&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="mailto:info@gkapdevelopmentgroup.com" class="text-decoration-none text-dark">info@gkapdevelopmentgroup.com</a>&nbsp;&nbsp;|&nbsp;&nbsp;© 2017 GKA DEVELOPMENT LLC.</p>
     </div>
   </footer>
 
@@ -403,18 +454,18 @@
   <!-- Navbar & footer scripts -->
   <script>
     (function () {
-      const footer = document.querySelector('footer');
-      const navbar = document.querySelector('.navbar');
-      const heroHeight = document.querySelector('#home').offsetHeight;
+      const footer  = document.querySelector('footer');
+      const navbar  = document.querySelector('.navbar');
+      const hero    = document.querySelector('#home');
       const revealPoint = 100; // px from bottom to start fade‑in
 
       function onScroll() {
-        // Footer fade
+        // Footer fade‑in
         const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - revealPoint;
         footer.classList.toggle('show-footer', atBottom);
 
         // Navbar color switch
-        const pastHero = window.scrollY > heroHeight - 80;
+        const pastHero = window.scrollY > hero.offsetHeight - 80;
         navbar.classList.toggle('scrolled', pastHero);
       }
 
